@@ -25,12 +25,10 @@ The best to use Google Analytics (GA) is to identify the most valuable audiences
 
 These 5 - really 5 and a half - sets of tools give you the tools to improve the effectiveness of your your PR campaigns and tactics, both on and offline.
 
-###Tip 0.5: Some quick basics.
-
+### Tip 0.5: Some quick basics.
 Here are some things that you **need** to know: [Goals](http://searchengineland.com/a-beginner%E2%80%99s-guide-to-setting-goals-in-google-analytics-101826), [campaign tracking](https://support.google.com/analytics/answer/1033867?hl=en), [event tracking](https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide).
 
 ###Tip 1: Align your online visitors with your key audiences and stakeholders
-
 The most important concept here is to align your key audiences with your website visitors, determine who are your most valuable visitors, and get more of them.
 
 Google allows GA users to use DART advertising cookies to learn more information about users, including age, gender, and some additional interest categories (which just happen to align with Google’s ad parameters).
@@ -43,8 +41,7 @@ Aside: Need a quick way of showing how various traffic sources contribute to con
 
 (Want to get more of these users? Try Google’s Remarketing service to run additional adds targeted at specific goals)
 
-###Tip 2: Guide Your Content With Analytics
-
+### Tip 2: Guide Your Content With Analytics
 There are a range of GA features that give insight into what types and pieces of content users engage with, and which ones lead to additional exits.
 
 The first step is to examine which are the most popular content pieces and categories. Planning ahead by creating URL patterns to make this easy goes a long way in analysis.
@@ -69,8 +66,7 @@ To set up a user group segment, create a new segment from the drop down menu. Se
 
 Now you have some hard evidence to show your bosses to justify purchasing a 27-inch Apple Cinema Display
 
-###Tip 3: Measuring Real Life
-
+### Tip 3: Measuring Real Life
 Given how much time we all spend in front of our favorite glowing boxes, we can consider the internet “real life” by now. But not everyone agrees.
 
 How can we measure outcomes that come from non-online PR efforts?
@@ -87,8 +83,7 @@ User surveys can be an extremely valuable piece of information. Depending on you
 
 Most CMS systems enable some type of web form and allow users to be redirected to a specific page when the form gets submitted.
 
-###Tip Four: Selling Your Content
-
+### Tip Four: Selling Your Content
 We all are selling something, even if there’s no price listed.
 
 Here are a few use cases of Google Analytics to improve your content by seeing what is the best content more dynamic outcomes in mind.
@@ -99,8 +94,7 @@ Do you list resources or links to stakeholder or partner organizations (like spo
 
 See the Pen [Referral Hub Link Tracking](http://codepen.io/donaldwasserman/pen/EpLzi) by Donald Wasserman [@donaldwasserman](http://codepen.io/donaldwasserman) on [CodePen](http://codepen.io).
 
-###Tip 5: Don’t Get Fired
-
+### Tip 5: Don’t Get Fired
 Now you’re doing some awesome things: looking at custom user group segments, bringing deeper insight into your key audiences, perhaps doing some advertising tracking or content experiments.
 
 But a cautionary tale.

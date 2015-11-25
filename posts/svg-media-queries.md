@@ -7,7 +7,6 @@ id: 3
 ---
 
 ### There's only one word: "UGH"
-
 I am working on a project using custom svg elements as part of a map on a sign-up form.
 
 To make sign up easier on mobile, I wanted to "deconstruct" the map elements into a more mobile-friendly layout. When I finished it, I found this weird quirk:

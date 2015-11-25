@@ -43,7 +43,6 @@ There’s really no actual _programming_ involved — just some basic configurat
 Assemble’s documentation offers some basic boilerplate. Much of it centers around creating documentation from JSON or YAML files, to give more fine-grained control of building out style guides and other documentation. I’ve developed what I think is an easier template to generate an content-focused site, using those simple Markdown files.
 
 ### Directory Structure 
-
 ```
 /build
 /img-source
@@ -67,7 +66,6 @@ Gruntfile.js
 Gruntfile.js & pacakge.json => These are the configuration files that set the whole process in motion. There is a great overview to [Grunt by Chris Coyier available here.](http://24ways.org/2013/grunt-is-not-weird-and-hard/)
 
 ### The Basics
-
 ([Again, see all the code in my GitHub repo.](https://github.com/donaldwasserman/boilerplate/tree/assemble))
 
 We’re going to create the really basic “5 pager,” a website (maybe more or less than five pages) that we need to promote a product, service, or a teaser for a new report. I added two .md files, “index.md” and “page-two.md.” Assemble will turn these files into our html pages.
@@ -75,17 +73,15 @@ We’re going to create the really basic “5 pager,” a website (maybe more or
 YAML front matter (YFM) is the space between the dashes at the top of each markdown file. I have a basic title and description, but we can add additional information like author, categories, or anything else we want to access in our templates.
 
 ### The Templates
+Our template folder holds our templates and partials. Assemble uses the handlebars.js tempting engine, so include partials is as easy as `{{> partialName}}`.
 
-Our template folder holds our templates and partials. Assemble uses the handlebars.js tempting engine, so include partials is as easy as `{\{> partialName}}`.
+Using information from the YAML front matter is as easy as a line like this:  `{{this.page.title}}`.
 
-Using information from the YAML front matter is as easy as a line like this:  `{\{this.page.title}}`.
-
-To access the body content from the markdown file, you simply wrap a `{\{> body}}` partial reference with an opening `{\{#markdown}}` and closing  `{\{/markdown}}` tag.
+To access the body content from the markdown file, you simply wrap a `{{> body}}` partial reference with an opening `{{#markdown}}` and closing  `{{/markdown}}` tag.
 
 Templates and partials keep everything DRY and clean, so changes are easy to make across pages.
 
-###Pulling it all Together
-
+### Pulling it all Together
 Here is where Assemble pulls everything together, like your own personal website valet. All of the configuration options are stored in your Gruntfile (aka Gruntfile.js).
 
 (This all refers to the v. 0.4.x branch of Assemble. The 0.6.x branch will operate more like generic middleware, so there isn’t a grunt dependency.)
@@ -94,8 +90,7 @@ All the configuration is relatively easy (It really is! Read the article for Gru
 
 Like all Grunt tasks, Assemble’s options are organized with a set of options: {} and then configuration options for each type of pages to create. We just have “pages,” but could easily include “news,” “blog,” or “products” that have different templates or source folders.
 
-####HERE ARE THE BASICS TO GET STARTED.
-
+### HERE ARE THE BASICS TO GET STARTED.
 Below is the basic Grunt task for Assemble.
 
 ```javascript
@@ -135,6 +130,6 @@ Assets: defines where your final production files are saved so Assemble is “aw
 
 The pages: {}  option defines the source and destination of the content pages. In typical Grunt structure, cwd: is the source directory, dest: is the build directory, and src: is the type of files.
 
-####USING THE TERMINAL
+### USING THE TERMINAL
 
 Now open up your favorite terminal application and, once you've navigated to your project directory, type grunt assemble. Viola!

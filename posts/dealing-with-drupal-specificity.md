@@ -19,7 +19,7 @@ CSS specificity is a core concept to understand css. Rules with the highest spec
 
 Keegan Street's [CSS Specificity Calculator](https://github.com/keeganstreet/specificity) enumerates each selector's specificity. More selectors, the higher specificity, the more specificity your selector needs to override the style.
 
-####Close Enough for Hand Grenades
+#### Close Enough for Hand Grenades
 
 Although it's hard to complain about a product you get for free, re-writing a contributed module's css file just so you can override it later is a face-to-keyboard moment.
 
@@ -43,8 +43,7 @@ Selectors closely tied to specific markup structures like this one:
 
 THis markup-specific code is extremely brittle and if my theme requires updating the markup for layout purposes, will break the critical maroon-on-yellow styling.
 
-####Too Much Specificity
-
+#### Too Much Specificity
 The main problem is too much specificity in selectors. A few examples of this from a recent project:
 
 ![div specificity](/images/div-specificity.png)
@@ -67,9 +66,8 @@ In this case, ID selectors are stacked on top of each other, making it doubly ha
 
 I'm not all negative -- the [FAQ module](http://www.drupal.org/project/faq) has great, flat, themeable CSS.
 
-![Great Work FAQ](/images/faq.png)
 
-####Tools and Strategies
+### Tools and Strategies
 
 Today, with any module that requires additional themeing, I almost always unset the css first, either in the theme's `.info` file or in `template.php`.
 

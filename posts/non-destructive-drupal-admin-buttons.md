@@ -18,21 +18,21 @@ We will find the current button elements on the page, check to make sure they're
 
 Just drop all of these into your `template.php` (or a file included it in.)
 
-####Step one: Call `hook_element_info_alter()`
+### Step one: Call hook_element_info_alter()
 
 ```php
-function theme_name_element_info_alter(&$type) {
+  function theme_name_element_info_alter(&$type) {
     foreach ($type as &$element) {
-        if (isset($element['#type'])) {
-          if ($element['#type'] === 'button' || $element['#type'] === 'submit' ||  $element['#type'] === 'image_button') {
-            $element['#process'][] = 'fixup_buttons_process';
-          }
+      if (isset($element['#type'])) {
+        if ($element['#type'] === 'button' || $element['#type'] === 'submit' ||  $element['#type'] === 'image_button') {
+          $element['#process'][] = 'fixup_buttons_process';
         }
-    }
-}
+      }
+   }
+ }
 ```
 
-####Create '`fixup_buttons_process()`' Callback
+### Create '`fixup_buttons_process()`' Callback
 
 This is easy: take the current element and process it.
 
@@ -42,8 +42,9 @@ function fixup_buttons_process($element) {
   return $element;
 }
 ```
+sadfadsds
 
-####Create function to process button elements
+### Create function to process button elements
 
 This function checks the class array of the current element, if it doesn't contain our list of classes, it runs processes the current value of the button and adds the right class.
 
@@ -62,7 +63,7 @@ function button_process(&$item) {
 }
 ```
 
-####Check to see if there are existing classes, and then create them based on a library of words/class values
+### Check to see if there are existing classes, and then create them based on a library of words/class values
 
 First we create a function checking the array of classes, which returns a boolean value.
 
@@ -100,7 +101,7 @@ _Note: there are probably many more efficient ways of doing the checking for but
 
 ```php
 function color_button($string) {
-    $values = array(
+   $values = array(
         'Save features'         => 'primary',
         'Mark as completed'     => 'primary',
         t('Create')             => 'success',

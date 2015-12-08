@@ -1,7 +1,7 @@
 ---
 title: Michigan Center for Nursing
 url: https://michigancenterfornursing.org
-mainImg: atom-author-grab.png
+mainImg: michigancenterfornursing.png
 id: 2
 ---
 

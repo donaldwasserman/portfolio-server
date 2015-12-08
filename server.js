@@ -7,8 +7,8 @@ var express = require('express'),
     marked = require('marked'),
     Promise = require('bluebird'),
     readFile = require('./app/readFile'),
-    mdServe = require('./app/md-serve'),
-    morgan = require('morgan');
+    morgan = require('morgan'),
+    mdJson = require('md-json');
 
 var port = process.env.PORT || 3000;
 app.use(bodyParser.json());
@@ -36,29 +36,22 @@ app.use(function(req, res, next) {
 app.use(morgan('combined'));
 
 app.get('/posts', function(req, res) {
-  fs.readdirAsync('posts')
-    .then(function(files) {
-      var posts = [];
-
-      files.forEach(function(e) {
-        posts.push(readFile(e, 'posts'));
-      });
-
-      res.json({posts: posts});
-    }).catch(function(err) {
-      res.json({error: err});
-    });
+  var posts = mdJson('posts');
+  posts.then(function(data) {
+    res.json(data);
+  });
 });
 
 app.get('/posts/:title', function (req, res) {
-  var title = req.params.title + '.md';
-  res.json({post: readFile(title, 'posts')});
+  var post = mdJson('posts', req.params.title);
+  post.then(function(data) {
+    res.json(data);
+  });
 });
 
 app.get('/projects', function(req, res) {
-  var d = mdServe('projects');
+  var d = mdJson('projects');
   d.then(function(data) {
-    console.log(data);
     res.json(data);
   })
   .catch(function(err) {
@@ -67,7 +60,7 @@ app.get('/projects', function(req, res) {
 });
 
 app.get('/projects/:title', function(req, res) {
-  var d = mdServe('projects', req.params.title);
+  var d = mdJson('projects', req.params.title);
   d.then(function(data) {
     res.json(data);
   })

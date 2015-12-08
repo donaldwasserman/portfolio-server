@@ -8,7 +8,8 @@ var express = require('express'),
     Promise = require('bluebird'),
     readFile = require('./app/readFile'),
     morgan = require('morgan'),
-    mdJson = require('md-json');
+    mdJson = require('md-json'),
+    cors = require('cors');
 
 var port = process.env.PORT || 3000;
 app.use(bodyParser.json());
@@ -23,7 +24,7 @@ Promise.promisifyAll(fs);
 app.use(express.static(__dirname + '/public'));
 
 app.use(function(req, res, next) {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:4200');
+    cors();
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
 

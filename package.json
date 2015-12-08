@@ -12,13 +12,14 @@
   "dependencies": {
     "bluebird": "^3.0.2",
     "body-parser": "^1.14.1",
+    "cors": "^2.7.1",
     "express": "^4.13.3",
     "highlight.js": "^8.9.1",
     "marked": "^0.3.5",
+    "md-json": "donaldwasserman/md-json",
     "method-override": "^2.3.5",
     "pluralize": "^1.2.1",
-    "yaml-front-matter": "^3.2.3",
-    "md-json": "donaldwasserman/md-json"
+    "yaml-front-matter": "^3.2.3"
   },
   "devDependencies": {
     "morgan": "^1.6.1"

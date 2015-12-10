@@ -8,10 +8,9 @@ var express = require('express'),
     Promise = require('bluebird'),
     readFile = require('./app/readFile'),
     morgan = require('morgan'),
-    mdJson = require('md-json'),
-    cors = require('cors');
+    mdJson = require('md-json');
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 4000;
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -34,7 +33,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.use(morgan('combined'));
+//app.use(morgan('combined'));
 
 app.get('/posts', function(req, res) {
   var posts = mdJson('posts');

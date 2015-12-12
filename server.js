@@ -9,7 +9,7 @@ var express = require('express'),
     readFile = require('./app/readFile'),
     mdJson = require('md-json');
 
-var port = process.env.PORT || 4000;
+var port = process.env.PORT || 3000;
 app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(bodyParser.urlencoded({ extended: true }));

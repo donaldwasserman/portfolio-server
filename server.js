@@ -7,7 +7,6 @@ var express = require('express'),
     marked = require('marked'),
     Promise = require('bluebird'),
     readFile = require('./app/readFile'),
-    morgan = require('morgan'),
     mdJson = require('md-json');
 
 var port = process.env.PORT || 4000;
